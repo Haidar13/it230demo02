@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<style>
+    body {
+      background-color:lightslategrey;
+    }
+    h1 {
+       background-color:darkgray;
+    }
+    p {
+      background-color: lightgray;
+    }
+    nav {
+      background-color: #DCDCDC;
+      color:black;
+      padding: 10px;
+    }
+    a {
+      text-decoration: none;
+      margin: 10px;
+      height: 15px;
+      text-transform: uppercase;
+      background-color: blueviolet;
+    }
+</style>
+
+<script>
+  function change(){
+  var checked = document.getElementById("fix");
+  if (checked.checked == true)
+    {
+      document.body.style.backgroundColor = "white";
+      var h1Elements = document.getElementsByTagName("h1");
+      for(var i = 0; i < h1Elements.length; i++) {
+          h1Elements[i].style.backgroundColor = "white";
+      }
+      
+      var pElements = document.getElementsByTagName("p");
+      for(var i = 0; i < pElements.length; i++) {
+          pElements[i].style.fontSize = "larger";
+          pElements[i].style.backgroundColor ="white";
+      }
+  }
+  
+  else
+
+  {
+    document.body.style.backgroundColor = "lightslategrey";
+    var h1Elements = document.getElementsByTagName("h1");
+
+    for(var i = 0; i < h1Elements.length; i++) {
+        h1Elements[i].style.backgroundColor = "darkgray";
+        }
+
+        var pElements = document.getElementsByTagName("p");
+      for(var i = 0; i < pElements.length; i++) {
+          pElements[i].style.fontSize = "smaller";
+          pElements[i].style.backgroundColor ="lightgray";
+      }
+  }
+  
+  }
+  </script>
+</head>
+<body>
+    <nav>
+      <a href="page1.html">HTML</a>
+    <a href="page2.html">Adding CSS</a>
+    <a href="page3.html">Using JavaScript</a>
+      <input type="checkbox" name="Bling" id="fix" onclick="change();"/>Change Theme
+    </nav>
+    <img src="webdev.png" height="300" width="350"> 
+    <h1>Describe methods and tools in web development.</h1>
+    <p>Editor and browser</p>
+    <h1>Create web pages using HTML5 and CSS3.</h1>
+    <p>Learn about html tags and styling using CSS3</p>
+    <h1>Develop dynamic web pages using JavaScript.</h1>
+    <p> Making the pages interactive </p>
+    <h1>We will try to build web applications using PHP and MySQL.</h1>
+    <p>might be useful for the senior project</p>
+
+</body>
+</html>
